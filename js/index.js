@@ -9,6 +9,9 @@ allMenuItems.forEach((a) => {
   a.addEventListener("mouseleave", (event) => {
     a.style.fontWeight = "normal"
   })
+  a.addEventListener('click', event => {
+    event.preventDefault()
+  })
 })
 
 // * [ ] `keydown`
@@ -87,16 +90,14 @@ window.addEventListener("scroll", event => {
 
 
 // * [ ] `select`
-pText = document.querySelectorAll('p')
+const inputBox = document.querySelector('input')
 
-pText.forEach( x => {
-  x.addEventListener('select', event => {
-    console.log("test")
-  })
+inputBox.addEventListener('select', event => {
+  console.log("don't select the copyright!")
 })
 
 // * [ ] `dblclick`
-
+pText = document.querySelectorAll('p')
 
 
 pText.forEach( x => {
