@@ -4,8 +4,10 @@ const allMenuItems = document.querySelectorAll('.nav-link')
 
 allMenuItems.forEach((a) => {
   a.addEventListener("mouseenter", (event) => {
-    console.log("mouseenter")
     a.style.fontWeight = "bold"
+  })
+  a.addEventListener("mouseleave", (event) => {
+    a.style.fontWeight = "normal"
   })
 })
 
