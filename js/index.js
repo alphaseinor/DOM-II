@@ -48,20 +48,36 @@ const images = document.querySelectorAll("img")
 images.forEach((x) => {
   x.addEventListener("drag", (event) => {
     event.preventDefault()
-    console.log("denied")
+    // console.log("denied")
+    // this prevents the drag of an image
   })
 })
 
 // * [ ] `load`
-
+window.addEventListener("load", (event) =>{
+  if(event.returnValue === true){
+    console.log("Page loaded successfully")
+  }else{
+    console.log("Something went wrong")
+  }
+})
 
 
 // * [ ] `focus`
 
+const buttons = document.querySelectorAll(".btn")
+
+buttons.forEach( x => {
+  x.addEventListener('focus', event => {
+    console.log("focus")
+  }, true)
+})
 
 
 // * [ ] `resize`
-
+window.addEventListener('resize', event => {
+  console.log(window.innerWidth, window.innerHeight)
+})
 
 
 // * [ ] `scroll`
