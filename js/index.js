@@ -67,14 +67,11 @@ window.addEventListener("load", (event) =>{
 
 
 // * [ ] `focus`
+const inputBox = document.querySelector('input')
 
-const buttons = document.querySelectorAll(".btn")
-
-buttons.forEach( x => {
-  x.addEventListener('focus', event => {
-    console.log("focus")
+  inputBox.addEventListener('focus', event => {
+    console.log("focus, something I don't usually have")
   }, true)
-})
 
 
 // * [ ] `resize`
@@ -90,7 +87,7 @@ window.addEventListener("scroll", event => {
 
 
 // * [ ] `select`
-const inputBox = document.querySelector('input')
+
 
 inputBox.addEventListener('select', event => {
   console.log("don't select the copyright!")
