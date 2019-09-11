@@ -81,11 +81,26 @@ window.addEventListener('resize', event => {
 
 
 // * [ ] `scroll`
-
+window.addEventListener("scroll", event => {
+  console.log(`scroll event happened at ${event.timeStamp}`)
+})
 
 
 // * [ ] `select`
+pText = document.querySelectorAll('p')
 
-
+pText.forEach( x => {
+  x.addEventListener('select', event => {
+    console.log("test")
+  })
+})
 
 // * [ ] `dblclick`
+
+
+
+pText.forEach( x => {
+  x.addEventListener('dblclick', event => {
+    x.style.fontWeight = "bold"
+  })
+})
